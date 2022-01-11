@@ -1,0 +1,23 @@
+{
+  "name": "background-and-gradients",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass --watch sass/main.scss css/style.css",
+    "compile:sass": "sass sass/main.scss css/style.compile.css --no-source-map",
+    "prefix:css": "postcss css/style.compile.css -o css/style.prefix.css --use autoprefixer",
+    "compress:css": "sass css/style.prefix.css css/style.css --style=compressed --no-source-map",
+    "build:css": "npm run compile:sass && npm run prefix:css && npm run compress:css"
+  },
+  "keywords": [],
+  "author": "jason89521",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.47.0"
+  }
+}
